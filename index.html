@@ -11,20 +11,31 @@
 
 <body>
     <div id="shoppingList">
-        <h1>Todo App Using Vue</h1>
-        <input type="text" v-model='header' v-on:keyup.enter="AddTodo" />
-        <button v-on:click="AddTodo">{{AddButton}}</button>
+        <div class="child1">
+            <div>
+
+                <h1>Todo App Using Vue</h1>
+            </div>
+            <div class="input">
+
+                <input type="text" v-model='header' v-on:keyup.enter="AddTodo" />
+                <button v-on:click="AddTodo">{{AddButton}}</button>
+            </div>
         <!-- @click or @keyup.enter can also be used for short hand syntax in vue -->
         <ul>
             <li v-for="todo in todos" class="TodoList">
-                {{todo}}
-                <button v-on:click="Edit(todo)">Edit</button>
-                <button v-on:click="Delete(todo)" :disabled="isActive ? true : false">Delete</button>
+              <span>{{todo}}</span>  
+                <span>
+
+                    <button v-on:click="Edit(todo)">Edit</button>
+                    <button v-on:click="Delete(todo)" :disabled="isActive ? true : false">Delete</button>
+                </span>
             </li>
 
             <!-- </transition> -->
 
         </ul>
+    </div>
     </div>
 </body>
 <script src="https://unpkg.com/vue"></script>

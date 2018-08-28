@@ -1,3 +1,53 @@
 .TodoList {
     list-style: none;
 }
+#shoppingList{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* text-align: center; */
+}
+.child1{
+    width: 100%;
+}
+.child1>div>h1{
+    text-align: center
+}
+.child1>div>button{
+    text-align: center
+}
+.child1>.input{
+    text-align: center
+}
+.child1>ul{
+    padding: 0;
+    width: 100%;
+}
+.child1>ul>li{
+    width: 100%;
+    margin: 10px 0px;
+    background-color: rgb(63, 77, 88);
+    padding: 10px 0px;
+}
+
+.child1>ul>li>:nth-child(1){
+    width: 48%;
+    padding-left: 1%;
+    display: inline-block;
+    color: white;
+    position: relative;
+    bottom: 2px
+}
+.child1>ul>li>:nth-child(2){
+    width: 49%;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+.child1>ul>li>:nth-child(2)>button{
+    float: right;
+}
+/* .child1>ul>li>:nth-child(2){
+    width: 50%;
+    display: inline-block
+} */
