@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueTodo</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="shoppingList">
+        <h1>Todo App Using Vue</h1>
+        <input type="text" v-model='header' v-on:keyup.enter="AddTodo" />
+        <button v-on:click="AddTodo">{{AddButton}}</button>
+        <!-- @click or @keyup.enter can also be used for short hand syntax in vue -->
+        <ul>
+            <li v-for="todo in todos" class="TodoList">
+                {{todo}}
+                <button v-on:click="Edit(todo)">Edit</button>
+                <button v-on:click="Delete(todo)" :disabled="isActive ? true : false">Delete</button>
+            </li>
+
+            <!-- </transition> -->
+
+        </ul>
+    </div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script src="index.js"></script>
+
+</html>
